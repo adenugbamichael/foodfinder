@@ -30,7 +30,7 @@ services:
     # configure working directory for installing next.js
     # working_dir: /home/node/code/
     # configure working directory for running the application
-    working_dir: /home/node/code/
+    working_dir: /home/node/code/foodfinder-application
     # configure ports, map the container port to the host’s. the application listens to port 3000 (container) and is available at localhost:3000 (host)
     ports:
       - "3000:3000"
@@ -50,6 +50,7 @@ services:
       - CHOKIDAR_INTERVAL=100
     # keep container alive for installing next.js
     tty: true
+    command: "npm run dev"
 
 # configure data and node modules as shared volumes
 volumes:
