@@ -7,7 +7,7 @@
 // node_modules are globally resolved.
 import mongoose, { ConnectOptions } from "mongoose"
 // get the connection string from the environment vars
-
+mongoose.set("strictQuery", true)
 const MONGO_URI = process.env.MONGO_URI || ""
 if (!MONGO_URI.length) {
   throw new Error(
