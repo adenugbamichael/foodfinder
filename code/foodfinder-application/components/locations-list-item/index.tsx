@@ -1,3 +1,7 @@
+/**
+ * Renders all user documents as rows to the DOM.
+ */
+
 import Link from "next/link"
 import styles from "./index.module.scss"
 import { LocationType } from "mongoose/locations/schema"
@@ -25,4 +29,5 @@ const LocationsListItem = (props: PropsInterface): JSX.Element => {
     </>
   )
 }
+
 export default LocationsListItem
